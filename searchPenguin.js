@@ -15,7 +15,7 @@ let getData = () => {
     //Test stuff below.
     let getAllURL = "http://localhost:8083/getAll";
 
-    fetch(getAllURL).then(response => response.json().then(data => console.log(data)));
+    fetch("http://localhost:8083/get/1").then();
 
 }
 
