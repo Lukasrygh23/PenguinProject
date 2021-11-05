@@ -24,7 +24,7 @@ let deleteRequest = (num) => {
                 console.error(`status: ${response.status}`);
                 return;
             }
-
+            console.log("Creation successful!")
             resultField.innerHTML = "You've deleted the penguin at id " + num + ". You monster.";
 
         });

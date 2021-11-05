@@ -12,6 +12,40 @@
 
 <body>
 
+    <h1>Update a Penguin!</h1>
+    <br>
+    <br>
+    <div>
+        <h2>What penguin ID do you wish to replace?</h2>
+        <input type="number" id="penguinID"></input>
+    </div>
+    <br>
+    <div>
+        <h2>Put its name here</h2>
+        <input type="text" id="penguinName"></input>
+    </div>
+    <br>
+
+    <div>
+        <h2>How old is your penguin?</h2>
+        <input type="number" id="penguinAge"></input>
+    </div>
+    <br>
+    <div>
+        <h2>Can your penguin <strong>dance?</strong></h2>
+
+        <select name="happyFeet" id="happyFeetList">
+            <option selected="selected" value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+    </div>
+    <br>
+    <button id="updatePenguin">Update!</button>
+    <br>
+    <p id="result"></p>
+
+    <script src="updatePenguin.js"></script>
+
 </body>
 
 </html>
