@@ -5,13 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CreatePenguin</title>
+    <title>Create Penguin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 
 <body>
+    <h1>Create your penguin!</h1>
+    <br>
+    <br>
+    <div>
+        <h2>Put its name here</h2>
+        <input type="text" id="penguinName"></input>
+    </div>
+    <br>
 
+    <div>
+        <h2>How old is your penguin?</h2>
+        <input type="number" id="penguinAge"></input>
+    </div>
+    <br>
+    <div>
+        <h2>Can your penguin <strong>dance?</strong></h2>
+
+        <select name="happyFeet" id="happyFeetList">
+            <option selected="selected" value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+    </div>
+    <br>
+    <button id="createPenguin">Create your penguin!</button>
+    <br>
+    <p id="result"></p>
+
+    <script src="createPenguin.js"></script>
 </body>
 
 </html>
