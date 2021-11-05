@@ -3,21 +3,40 @@
 let idField = document.querySelector("#idField");
 let searchButton = document.querySelector("#searchButton");
 
-let showData = () => {
+let postData = () => {
+    let num = Number(idField.value);
+    let postData = getData(num);
+    console.log(postData);
+};
 
-}
+let getData = (num) => {
 
-
-let getData = () => {
-    let penguinId = idField.value;
-    let url = "http://localhost:8083/get/" + idField.value;
+    let url = "http://localhost:8083/get/" + num;
     console.log(url);
     //Test stuff below.
     let getAllURL = "http://localhost:8083/getAll";
 
-    fetch("http://localhost:8083/get/1").then();
 
-}
+    fetch(url)
+        .then((response) => {
+            if (response.status !== 202) {
+                console.error(`status: ${response.status} `);
+                return;
+            }
+            response.json()
+                .then((data) => {
+                    console.log(data);
+                    //console.log(data[0]);
+                    //console.log(data[0].body);
+                    return data;
+                }
+
+                )
+        }).catch((error) => {
+            console.error(`${error}`)
+        });
+
+};
 
 
 
@@ -26,4 +45,4 @@ let getData = () => {
 
 
 //BUTTONS
-searchButton.addEventListener('click', getData())
+searchButton.addEventListener('click', postData);
