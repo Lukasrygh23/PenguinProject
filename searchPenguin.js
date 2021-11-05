@@ -2,11 +2,14 @@
 
 let idField = document.querySelector("#idField");
 let searchButton = document.querySelector("#searchButton");
+let nameField = document.querySelector("#pengName");
+let ageField = document.querySelector("#pengAge");
 
 let postData = () => {
     let num = Number(idField.value);
     let postData = getData(num);
-    console.log(postData);
+    //console.log(postData);
+
 };
 
 let getData = (num) => {
@@ -28,6 +31,13 @@ let getData = (num) => {
                     console.log(data);
                     //console.log(data[0]);
                     //console.log(data[0].body);
+                    console.log(data.name);
+                    nameField.innerHTML = data.name;
+                    ageField.innerHTML = data.age;
+
+                    //Now to insert the name and age and stuff
+
+
                     return data;
                 }
 
